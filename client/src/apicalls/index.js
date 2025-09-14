@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "http://localhost:8082",
+  baseURL: "https://book-my-show-opal-beta.vercel.app",
   headers: {
     withCredentials: true,
     "Content-Type": "application/json",
