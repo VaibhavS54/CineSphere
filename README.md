@@ -50,35 +50,35 @@ A full-stack web application inspired by **BookMyShow**, built as part of a hiri
    Install dependencies for both frontend & backend:
    ```
 
-bash
-Copy code
-cd server
-npm install
-
-cd ../client
-npm install
-Configure environment variables:
-Create a .env file in the server directory with:
-
 env
+
+```bash
 Copy code
 MONGO_URL="Mongo_URL"
 JWT_SECRET=mysecret
 PORT=8082
+```
 
 Run the backend:
+
+```bash
 cd server
 npm i
 npm start
+```
 
 Run the frontend:
+
+```bash
 cd client
 npm i
 npm start
 It will Open the app in browser
+```
 
-🗂️ Database Schema (Simplified)
+🗂️ Database Schema
 
+```bash
 Users
 
 {
@@ -133,6 +133,7 @@ Bookings
 "seats": [],
 "status": "confirmed/cancelled"
 }
+```
 
 📌 Evaluation Criteria Alignment
 Functionality: Covers all required flows (users, movies, cinemas, shows, bookings).
