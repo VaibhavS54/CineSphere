@@ -11,7 +11,10 @@ const theatreRoute = require("./routes/theatreRoutes");
 const bookingRoute = require("./routes/bookingRoutes");
 
 
-app.use(cors());
+app.use(cors({
+  origin: "https://chiragbms.vercel.app", // your frontend URL
+  credentials: true
+}));
 app.get('/',(req,res)=>{
   res.send("hi");
 });
