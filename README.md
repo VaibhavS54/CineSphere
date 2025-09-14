@@ -31,6 +31,7 @@ A full-stack web application inspired by **BookMyShow**, built as part of a hiri
 - **Backend**: Node.js, Express.js, MongoDB
 - **Authentication**: JWT (JSON Web Token)
 - **Deployment**: Vercel (Frontend + Backend)
+- **Testing**: Postman
 
 ---
 
