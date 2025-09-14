@@ -27,7 +27,7 @@ A full-stack web application inspired by **BookMyShow**, built as part of a hiri
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React (Vite), Redux, Ant Design, Axios
+- **Frontend**: React (Vite), Redux, Axios
 - **Backend**: Node.js, Express.js, MongoDB
 - **Authentication**: JWT (JSON Web Token)
 - **Deployment**: Vercel (Frontend + Backend)
@@ -75,7 +75,64 @@ Run the frontend:
 cd client
 npm i
 npm start
-It will Open the app in browser:
+It will Open the app in browser
+
+🗂️ Database Schema (Simplified)
+
+Users
+
+{
+"name": "string",
+"email": "string",
+"password": "string",
+"bookings": [BookingId]
+}
+
+Cinemas
+
+{
+"name": "string",
+"location": "string",
+"screens": [ScreenId]
+}
+
+Screens
+
+{
+"cinemaId": "ObjectId",
+"name": "string",
+"seats": "10x10 layout"
+}
+
+Movies
+
+{
+"title": "string",
+"description": "string",
+"language": "string",
+"duration": "number",
+"genre": "string",
+"poster": "string",
+"releaseDate": "date"
+}
+
+Shows
+
+{
+"movieId": "ObjectId",
+"screenId": "ObjectId",
+"time": "datetime",
+"bookedSeats": []
+}
+
+Bookings
+
+{
+"userId": "ObjectId",
+"showId": "ObjectId",
+"seats": [],
+"status": "confirmed/cancelled"
+}
 
 📌 Evaluation Criteria Alignment
 Functionality: Covers all required flows (users, movies, cinemas, shows, bookings).
