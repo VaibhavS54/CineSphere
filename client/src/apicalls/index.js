@@ -2,9 +2,17 @@ import axios from "axios";
 
 export const axiosInstance = axios.create({
   baseURL: "https://book-my-show-opal-beta.vercel.app",
+  withCredentials: true, // must be outside headers
   headers: {
-    withCredentials: true,
     "Content-Type": "application/json",
-    Authorization: `Bearer ${localStorage.getItem("token")}`,
   },
+});
+
+// Add interceptor to attach token dynamically
+axiosInstance.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
 });

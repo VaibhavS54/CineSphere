@@ -12,7 +12,9 @@ const bookingRoute = require("./routes/bookingRoutes");
 
 
 app.use(cors());
-
+app.get('/',(req,res)=>{
+  res.send("hi");
+});
 app.use(express.json());
 app.use("/api/user", userRoute);
 app.use("/api/movie", movieRoute);
