@@ -12,8 +12,8 @@ const bookingRoute = require("./routes/bookingRoutes");
 
 
 app.use(cors({
-  // origin: "http://localhost:3000",
-  origin: "https://chiragbms.vercel.app", // your frontend URL
+  origin: "http://localhost:3000",
+  // origin: "https://chiragbms.vercel.app", // your frontend URL
   credentials: true
 }));
 app.get('/',(req,res)=>{

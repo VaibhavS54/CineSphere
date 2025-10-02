@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "https://book-my-show-opal-beta.vercel.app",
+  baseURL: "https://cine-sphere-three.vercel.app",
   // baseURL: "http://localhost:8082",
   
   withCredentials: true, // must be outside headers

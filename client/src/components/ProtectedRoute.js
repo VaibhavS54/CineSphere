@@ -54,7 +54,7 @@ function ProtectedRoute({ children }) {
               className="text-2xl text-white cursor-pointer"
               onClick={() => navigate("/")}
             >
-              Book My Show {user.isAdmin ? "(Admin)" : ""}
+              CineSphere {user.isAdmin ? "(Admin)" : ""}
             </h1>
           </div>
 
